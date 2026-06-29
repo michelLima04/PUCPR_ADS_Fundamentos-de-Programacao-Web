@@ -1,0 +1,304 @@
+/* Configurações Gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAF9F6;
+    color: #4A3320; 
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+ul { 
+    list-style: none; 
+    padding-left: 5px; 
+}
+
+a { 
+    color: #556B2F; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estrutura do Site */
+.content {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding: 2rem 1rem;
+}
+
+.main {
+    padding: 0 15px;
+}
+
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+    padding-right: 15px;
+}
+
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+}
+
+/* Cabeçalho e Menu */
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo img {
+    width: 110px;
+    margin-bottom: 15px;       
+}
+
+.bar {
+    background-color: #FADADD; 
+    padding: 15px 0;
+    border-top: solid 2px #4A3320;
+    border-bottom: solid 2px #4A3320;
+    width: 100%;
+}
+
+.bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Vitrine e Imagens */
+figure {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.img-responsiva {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    margin: 0 auto;
+    display: block;
+}
+
+.link-destaque {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Formulário e Tabelas */
+.campo-largo {
+    width: 100%;
+    box-sizing: border-box; 
+    font-family: inherit;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #556B2F; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4A3320; 
+}
+
+.tabela-precos {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabela-precos th, .tabela-precos td {
+    border: 1px solid #4A3320;
+    padding: 8px;
+}
+
+.tabela-precos th {
+    background-color: #4A3320;
+    color: #FAF9F6;
+}
+
+/* Tabelas: Células brancas por padrão */
+.tabela-precos td {
+    background-color: #FFFFFF;
+}
+
+/* Coluna de destaque rosa */
+.coluna-rosa {
+    background-color: #FADADD !important;
+}
+
+.oculto {
+    display: none;
+}
+
+.fieldset-endereco {
+    border: 1px solid #cdcdcd; 
+    border-radius: 4px; 
+    padding: 15px; 
+    margin-bottom: 20px;
+}
+
+.legenda-endereco {
+    font-weight: bold; 
+    color: #4A3320; 
+    padding: 0 5px;
+}
+
+.campo-subtotal {
+    background-color: #e9ecef;
+    font-weight: bold; 
+    color: #556B2F; 
+}
+
+.galeria-form {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.galeria-form img {
+    width: 30%; 
+    border: 1px solid #cdcdcd;
+    margin: 0 5px; 
+    border-radius: 8px;
+}
+
+/* Mensagens do Pedido */
+.caixa-recibo {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 2px dashed #4A3320; 
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left; 
+}
+
+.caixa-recibo h2 {
+    text-align: center; 
+}
+
+.voltar-inicio {
+    text-align: center;
+    margin-top: 30px;
+    display: block;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.linha-divisoria {
+    border: 0;
+    border-top: 1px solid #FADADD;
+    margin: 15px 0;
+}
+
+.mensagem-sucesso {
+    color: #556B2F; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensagem-erro {
+    color: red; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+    min-height: 100px;
+    border-top: solid 2px #4A3320;
+    background-color: #4A3320;
+    color: #FAF9F6;
+    text-align: center;
+    padding: 20px;
+}
+
+.contato-rodape {
+    margin: 15px 0;
+}
+
+.titulo-contato {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.whatsapp-link, .instagram-link {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.05em;
+    color: #FADADD; 
+    text-decoration: none; 
+    font-weight: normal; 
+}
+
+.whatsapp-link:hover, .instagram-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* About */
+.figura-sobre {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.figura-sobre img {
+    max-width: 80%; 
+    border-radius: 8px; 
+    border: 1px solid #cdcdcd;
+}
+
+.figura-sobre figcaption {
+    font-style: italic; 
+    color: #556B2F; 
+    margin-top: 10px;
+}
+
+.texto-tecnico {
+    text-align: left; 
+    padding: 0 20px;
+}
+
+.lista-tecnica {
+    text-align: left; 
+    padding: 0 40px; 
+    list-style-type: disc;
+}
+
+.menu-ancoras li {
+    margin-bottom: 15px; 
+}
+
+.texto-justificado {
+    text-align: justify;
+    padding: 0 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
