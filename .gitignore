@@ -1,0 +1,9 @@
+Plaintext
+# Ignora tudo
+*
+
+# Mas NÃO ignore o arquivo .gitignore (para ele poder ser enviado)
+!.gitignore
+
+# E NÃO ignore a pasta da sua atividade
+!Atividade-Somativa-02/
