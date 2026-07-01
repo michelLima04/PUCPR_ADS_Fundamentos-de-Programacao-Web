@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosendo's Delícias Artesanais - Fazer Encomenda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo_rosendos.png" alt="Logo Rosendo's Delicias Artesanais"/>
+        </div>
+
+        <nav class="bar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Fazer Encomenda</a></li>
+                <li><a href="about.html">Nossa História</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+
+        <aside class="sidebar">
+            <div class="menu-ancoras">
+                <ul>
+                    <li><a href="#precos">Tabela de Preços</a></li>
+                    <li><a href="#formEncomenda">Fazer Pedido</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <section>
+                <h1>Fazer Encomenda</h1>
+                <p>Confira nossos valores e preencha o formulário abaixo para fazer o seu pedido!</p>
+
+                <div id="precos" class="apresentacao-produtos">
+                    
+                    <div class="galeria-form">
+                        <img src="img/recheio.png" alt="Pão de Mel Recheado">
+                        <img src="img/na-bandeja.png" alt="Pães de Mel na Bandeja">
+                        <img src="img/caixas.png" alt="Caixa de Presente">
+                    </div>
+                    <br>
+
+                    <h2>Tabela de Preços</h2>
+                    <table class="tabela-precos">
+                        <thead>
+                            <tr><th colspan="2">Unidades Avulsas</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="coluna-rosa">Mini</td><td>R$ 4,00</td></tr>
+                            <tr><td class="coluna-rosa">Pequeno</td><td>R$ 7,00</td></tr>
+                            <tr><td class="coluna-rosa">Grande</td><td>R$ 10,00</td></tr>
+                        </tbody>
+                    </table>
+
+                    <table class="tabela-precos"> 
+                        <thead> 
+                            <tr>
+                                <th>Tamanho (Caixas)</th>
+                                <th>Quant.</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3" class="coluna-rosa">Mini</td><td>4 un.</td><td>R$ 20,00</td></tr>
+                            <tr><td>6 un.</td><td>R$ 26,00</td></tr>
+                            <tr><td>12 un.</td><td>R$ 52,00</td></tr>
+                            
+                            <tr><td rowspan="4" class="coluna-rosa">Pequeno</td><td>2 un.</td><td>R$ 18,00</td></tr>
+                            <tr><td>4 un.</td><td>R$ 32,00</td></tr>
+                            <tr><td>6 un.</td><td>R$ 47,00</td></tr>
+                            <tr><td>9 un.</td><td>R$ 67,00</td></tr>
+
+                            <tr><td rowspan="3" class="coluna-rosa">Grande</td><td>2 un.</td><td>R$ 24,00</td></tr>
+                            <tr><td>3 un.</td><td>R$ 34,00</td></tr>
+                            <tr><td>4 un.</td><td>R$ 44,00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="linha-divisoria">
+
+                <form action="formAction.html" method="GET" id="formEncomenda">
+                    <h2>Fazer Pedido</h2>
+                    <div>
+                        <label for="nome">Seu Nome:</label><br>
+                        <input type="text" id="nome" name="nome" class="campo-largo" placeholder="Digite seu nome" required>
+                    </div>        
+                    <br>
+
+                    <div>
+                        <label for="telefone">Telefone (Contato):</label><br>
+                        <input type="text" id="telefone" name="telefone" class="campo-largo" placeholder="(41) 99999-9999" required>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="sabor">Sabores do Pão de Mel:</label><br>
+                        <select id="sabor" name="sabor" class="campo-largo" required>
+                            <option value="">Selecione um sabor...</option>
+                            <option value="Doce de Leite">Doce de Leite (Mais popular)</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Pacoca">Paçoca</option>
+                            <option value="Beijinho">Beijinho</option>
+                            <option value="Misto">Misto (Especificar nas observações)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="produto">O que você deseja encomendar?</label><br>
+                        <select id="produto" name="produto" class="campo-largo" required>
+                            <option value="" data-preco="0">Selecione na lista abaixo...</option>
+                            
+                            <option value="" disabled>--- UNIDADES AVULSAS ---</option>
+                            <option value="Avulso Mini" data-preco="4.00">Unidade Mini - R$ 4,00</option>
+                            <option value="Avulso Pequeno" data-preco="7.00">Unidade Pequena - R$ 7,00</option>
+                            <option value="Avulso Grande" data-preco="10.00">Unidade Grande - R$ 10,00</option>
+                            
+                            <option value="" disabled>--- CAIXAS MINI ---</option>
+                            <option value="Caixa Mini 4" data-preco="20.00">Caixa Mini (4 un) - R$ 20,00</option>
+                            <option value="Caixa Mini 6" data-preco="26.00">Caixa Mini (6 un) - R$ 26,00</option>
+                            <option value="Caixa Mini 12" data-preco="52.00">Caixa Mini (12 un) - R$ 52,00</option>
+
+                            <option value="" disabled>--- CAIXAS PEQUENAS ---</option>
+                            <option value="Caixa Peq 2" data-preco="18.00">Caixa Pequena (2 un) - R$ 18,00</option>
+                            <option value="Caixa Peq 4" data-preco="32.00">Caixa Pequena (4 un) - R$ 32,00</option>
+                            <option value="Caixa Peq 6" data-preco="47.00">Caixa Pequena (6 un) - R$ 47,00</option>
+                            <option value="Caixa Peq 9" data-preco="67.00">Caixa Pequena (9 un) - R$ 67,00</option>
+
+                            <option value="" disabled>--- CAIXAS GRANDES ---</option>
+                            <option value="Caixa Grande 2" data-preco="24.00">Caixa Grande (2 un) - R$ 24,00</option>
+                            <option value="Caixa Grande 3" data-preco="34.00">Caixa Grande (3 un) - R$ 34,00</option>
+                            <option value="Caixa Grande 4" data-preco="44.00">Caixa Grande (4 un) - R$ 44,00</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="quantidade">Quantidade de itens/caixas:</label><br>
+                        <input type="number" id="quantidade" name="quantidade" class="campo-largo" min="1" value="1" required>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="subtotal"><strong>Subtotal Estimado:</strong></label><br>
+                        <input type="text" id="subtotal" name="subtotal" class="campo-largo campo-subtotal" value="R$ 0,00" readonly>
+                    </div>
+                    <br><br>
+
+                    <div>
+                        <label><strong>Como deseja receber seu pedido?</strong></label><br>
+                        <input type="radio" id="retirada" name="recebimento" value="Retirada" required checked>
+                        <label for="retirada">Retirada no Local : Rua Desembargador Aristóxenes Bittercourt - Tarumã</label><br>
+                        
+                        <input type="radio" id="entrega" name="recebimento" value="Entrega">
+                        <label for="entrega">Entrega (Taxa a consultar)</label>
+                    </div>
+                    <br>
+
+                    <fieldset id="grupoEndereco" class="fieldset-endereco oculto">
+                        <legend class="legenda-endereco">Endereço de Entrega (Somente Curitiba)</legend>
+                        
+                        <label for="rua">Rua:</label><br>
+                        <input type="text" id="rua" name="rua" class="campo-largo" placeholder="Ex: Rua das Flores">
+                        <br><br>
+                        
+                        <label for="numero">Número:</label><br>
+                        <input type="text" id="numero" name="numero" class="campo-largo" placeholder="Ex: 123">
+                        <br><br>
+                        
+                        <label for="bairro">Bairro:</label><br>
+                        <input type="text" id="bairro" name="bairro" class="campo-largo" placeholder="Ex: Centro">
+                    </fieldset>
+
+                    <div>
+                        <label for="observacoes">Observações (Como dividir os sabores?):</label><br>
+                        <textarea id="observacoes" name="observacoes" rows="3" class="campo-largo" placeholder="Ex: Na caixa com 4, quero 2 de Doce de Leite e 2 de Brigadeiro."></textarea>                    
+                    </div>
+                    <br>
+
+                    <div>
+                        <button type="submit" id="btnEnviar">Confirmar Pedido</button>
+                    </div>
+
+                </form>
+
+            </section>
+        </main>
+
+        <aside class="anchors"></aside>
+
+    </div>
+   <footer class="footer">
+        <p>Desenvolvido para a Atividade Somativa 1 - Fundamentos de Programação Web</p>   
+        <div class="contato-rodape">
+            <p class="titulo-contato"><strong>Contato e Encomendas:</strong></p>
+            <a href="https://wa.me/5541996773758" target="_blank" class="whatsapp-link"> WhatsApp: (41) 99677-3758 - Falar com Rita</a>
+            <a href="https://www.instagram.com/rosendos.delicias.artesanais" target="_blank" class="instagram-link"> Instagram: @rosendos.delicias.artesanais</a>
+        </div>
+        <p>&copy; 2026 Rosendo's Delícias Artesanais.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
